@@ -52,6 +52,7 @@
 
 .slider__names {
   grid-area: name;
+  align-self: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: var(--color-text);
@@ -99,4 +100,17 @@
 
 .slider__button:first-child .circle {
   background-color: transparent;
+}
+
+@media (min-width: 600px) {
+  .slider {
+    grid-template-areas:
+      'gallery gallery'
+      'name control';
+    row-gap: 20px;
+  }
+
+  .slider__control {
+    justify-content: end;
+  }
 }
