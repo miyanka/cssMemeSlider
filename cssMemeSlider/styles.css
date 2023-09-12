@@ -1,0 +1,102 @@
+:root {
+  --width-image: 100%;
+  --count-images: 4;
+
+  --color-button: #71abff;
+  --color-button-hover: #fff;
+  --color-button-active: grey;
+  --color-text: #fff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+  margin: 0;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'gallery gallery'
+    'control control'
+    'name name';
+  row-gap: 10px;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #25282a;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slider__gallery-wrapper {
+  grid-area: gallery;
+  width: var(--width-image);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slider__gallery {
+  display: flex;
+  width: calc(var(--count-images) * var(--width-image));
+}
+
+.slider__image {
+  width: calc(var(--width-image) / var(--count-images));
+  object-fit: contain;
+}
+
+.slider__names {
+  grid-area: name;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.slider__name {
+  display: none;
+}
+
+.slider__name:first-child {
+  display: inline-flex;
+}
+
+.slider__control {
+  grid-area: control;
+  justify-content: center;
+  display: flex;
+}
+
+.slider__button {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-button);
+  border: 2px solid var(--color-button);
+  border-radius: 50%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .slider__button:hover > .circle {
+    background-color: var(--color-button-hover);
+    border-color: var(--color-button-hover);
+  }
+}
+
+.slider__button:active > .circle {
+  background-color: var(--color-button-active);
+  border-color: var(--color-button-active);
+}
+
+.slider__button:first-child .circle {
+  background-color: transparent;
+}

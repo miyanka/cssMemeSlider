@@ -8,8 +8,41 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-
+<body class="wrapper">
+	<section class="slider">
+		<input type="radio" name="slider" id="slider1" class="slider__input" checked>
+		<input type="radio" name="slider" id="slider2" class="slider__input">
+		<input type="radio" name="slider" id="slider3" class="slider__input">
+		<input type="radio" name="slider" id="slider4" class="slider__input">
+		<div class="slider__gallery-wrapper">
+			<div class="slider__gallery">
+				<img class="slider__image" src="img/meme-engineer.jpg" alt="slider1">
+				<img class="slider__image" src="img/meme-sysadmin.jpg" alt="slider2">
+				<img class="slider__image" src="img/meme-software-engineer.jpg" alt="slider3">
+				<img class="slider__image" src="img/meme-web-designer.jpg" alt="slider4">
+			</div>
+		</div>
+		<div class="slider__names">
+			<span class="slider__name">Engineer</span>
+			<span class="slider__name">Software Engineer</span>
+			<span class="slider__name">Sysadmin</span>
+			<span class="slider__name">Web Designer</span>
+		</div>
+		<div class="slider__control">
+			<label class="slider__button" for="slider1">
+				<span class="circle"></span>
+			</label>
+			<label class="slider__button" for="slider2">
+				<span class="circle"></span>
+			</label>
+			<label class="slider__button" for="slider3">
+				<span class="circle"></span>
+			</label>
+			<label class="slider__button" for="slider4">
+				<span class="circle"></span>
+			</label>
+		</div>
+	</section>
 </body>
 
 </html>
