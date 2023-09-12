@@ -79,10 +79,27 @@
 
 .slider__name {
   display: none;
+  margin-left: 100px;
+  opacity: 0;
 }
 
-.slider__name:first-child {
+#slider1:checked ~ .slider__names .slider__name:nth-of-type(1),
+#slider2:checked ~ .slider__names .slider__name:nth-of-type(2),
+#slider3:checked ~ .slider__names .slider__name:nth-of-type(3),
+#slider4:checked ~ .slider__names .slider__name:nth-of-type(4) {
   display: inline-flex;
+  animation: appear-slider-name var(--time-duration) forwards;
+}
+
+@keyframes appear-slider-name {
+  from {
+    margin-left: 100px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
 }
 
 .slider__control {
